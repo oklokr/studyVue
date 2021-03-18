@@ -1,0 +1,115 @@
+header {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    
+    .header-inner {
+
+        h1 {
+
+            a {
+                display: block;
+
+                img {
+                    display: block;
+                    width: 64px;
+                }
+            }
+        }
+    }
+}
+
+main {
+
+    .banner {
+        height: 750px;
+
+        .main-banner-wrap {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: 100%;
+            background: #f5f6fa;
+
+            .img-wrapper {
+                text-align: center;
+
+                img {
+                    width: 400px;
+                }
+            }
+
+            .text-btn-wrap {
+                text-align: center;
+                margin-top: 30px;
+
+                img {
+                    width: 210px;
+                }
+                
+                h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    margin: 16px 0 20px;
+                }
+                
+                button {
+                    color: #fff;
+                    font-size: 28px;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    background: grey;
+                }
+            }
+        }
+    }
+
+    .content {
+        
+        .content-inner {
+            width: 100%;
+            padding: 30px 20px;
+            text-align: center;
+
+            .introduction-inner {
+                font-size: 26px;
+
+                .img-title-wrap {
+
+                    margin-bottom: 40px;
+
+                    img {
+                        width: 300px;
+                    }
+
+                    h2 {
+                        font-size: 28px;
+                        font-weight: bold;
+                        margin-top: 30px;
+                    }
+                }
+            }
+
+            .text-wrap {
+                width: 460px;
+                line-height: normal;
+                text-align: left;
+                letter-spacing: -1.5px;
+                margin: 0 auto;
+                
+                div {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .footer-inner {
+        background: #fcfcfc;
+        color: #666;
+    }
+}
