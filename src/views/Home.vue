@@ -18,7 +18,7 @@
           <div class="text-btn-wrap">
             <img src="@/assets/img/text-logo.png" alt="텍스트로고">
             <h2>"저와 함께 식사하실래요?"</h2>
-            <button>MBTI 성향검사하기</button>
+            <router-link to="/MbtiTest">MBTI 성향검사하기</router-link>
           </div>
         </div>
       </section>
@@ -58,7 +58,28 @@
               <div class="youtube-link-btn">
                 <button>유튜브 채널 보러가기</button>
               </div>
-              <!--sns 공유하기-->
+                <div class="sns-link-btn-warp">
+                  <!-- 페이스북 공유 버튼 -->
+                  <a href="javascript:void(0)" @click="facebook()">
+                    <img src="@/assets/img/icon/face.png" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                  </a>
+                  <!-- 트위터 공유 버튼 -->
+                  <a href="javascript:void(0)" @click="twitter()">
+                    <img src="@/assets/img/icon/twt.png" title="트위터로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                  </a>
+                  <!-- 카카오 스토리 공유 버튼 -->
+                  <a href="javascript:void(0)" @click="kakaoStory()">
+                    <img src="@/assets/img/icon/kakao.png" title="카카오스토리로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                  </a>
+                   <!-- 네이버 공유 버튼 --> 
+                  <a href="javascript:void(0)" @click="naver()">
+                    <img src="@/assets/img/icon/band.png" title="네이버로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                  </a>
+                  <!-- 밴드 공유 버튼 --> 
+                  <a href="javascript:void(0)" @click="naverBand()">
+                    <img src="@/assets/img/icon/naver.png" title="밴드로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                  </a>
+                </div>
             </div>
 
             <div class="video-container">
@@ -103,21 +124,50 @@ export default {
     name: "Home",
     data() {
       return {
-        
-        // url_default_ks : "https://story.kakao.com/share?url=",
-        // url_default_fb : "https://www.facebook.com/sharer/sharer.php?u=",
-        // url_default_tw_txt : "https://twitter.com/intent/tweet?text=",
-        // url_default_tw_url : "&url=",
-        // url_default_band : "http://band.us/plugin/share?body=",
-        // url_route_band : "&route=",
-        // url_default_naver : "http://share.naver.com/web/shareView.nhn?url=",
-        // title_default_naver : "&title=",
-        // url_this_page : location.href,
-        // title_this_page : document.title
+        url_default_ks : "https://story.kakao.com/share?url=",
+        url_default_fb : "https://www.facebook.com/sharer/sharer.php?u=",
+        url_default_tw_txt : "https://twitter.com/intent/tweet?text=",
+        url_default_tw_url : "&url=",
+        url_default_band : "http://band.us/plugin/share?body=",
+        url_route_band : "&route=",
+        url_default_naver : "http://share.naver.com/web/shareView.nhn?url=",
+        title_default_naver : "&title=",
       }
     },
-    methods() {
-      console.log('test');
+    methods: {
+      facebook(){
+        console.log(location.href);
+        const url_this_page = location.href;
+        const url_combine_fb = this.url_default_fb + url_this_page;
+        window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600');
+        return false;
+      },
+      twitter(){
+        const url_this_page = location.href;
+        const url_combine_tw = this.url_default_tw_txt + document.title + this.url_default_tw_url + url_this_page;
+        window.open(url_combine_tw, '', 'scrollbars=no, width=600, height=600');
+        return false;
+      },
+      kakaoStory(){
+        const url_this_page = location.href;
+        const url_combine_ks = this.url_default_ks + url_this_page;
+        window.open(url_combine_ks, '', 'scrollbars=no, width=600, height=600');
+        return false;
+      },
+      naver(){
+        const url_this_page = location.href;
+        const title_this_page = document.title;
+        const url_combine_naver = this.url_default_naver + encodeURI(url_this_page) + this.title_default_naver + encodeURI(title_this_page);
+        window.open(url_combine_naver, '', 'scrollbars=no, width=600, height=600');
+        return false;
+      },
+      naverBand(){
+        const url_this_page = location.href;
+        const title_this_page = document.title;
+        const url_combine_band = this.url_default_band + encodeURI(url_this_page)+ '%0A' + encodeURI(title_this_page)+'%0A' + '&route=tistory.com';
+        window.open(url_combine_band, '', 'scrollbars=no, width=584, height=635');
+        return false;
+      }
     }
 }
 </script>

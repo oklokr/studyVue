@@ -9,7 +9,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   vertical-align: baseline;
   box-sizing:border-box;
-  font-family: jua !important;
 }
 button {
   border: 0px;
@@ -63,12 +62,4 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-/*# sourceMappingURL=style.css.map */
-
-
-/* Font Import */
-@font-face {
-  src: url(/word_smash_game/resource/fonts/BMJUA_ttf.ttf);
-  font-family: jua;
 }
