@@ -82,8 +82,10 @@
               </div>
             </div>
 
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/HSN44ttUYBU" frameborder="0" allowfullscreen></iframe>
+            <div class="video-wrap">
+                <div class="video-container">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eitDnP0_83k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
           </div>
         </div>
