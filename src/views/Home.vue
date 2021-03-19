@@ -83,7 +83,7 @@
             </div>
 
             <div class="video-container">
-                <iframe width="440" height="315" src="https://www.youtube.com/embed/HSN44ttUYBU" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/HSN44ttUYBU" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
