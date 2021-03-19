@@ -36,7 +36,11 @@ main {
                 text-align: center;
 
                 img {
-                    width: 400px;
+                    width: 260px;
+
+                    @media (min-width: 700px){
+                        width: 400px;
+                    }
                 }
             }
 
