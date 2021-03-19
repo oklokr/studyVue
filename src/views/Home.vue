@@ -58,28 +58,28 @@
               <div class="youtube-link-btn">
                 <button>유튜브 채널 보러가기</button>
               </div>
-                <div class="sns-link-btn-warp">
-                  <!-- 페이스북 공유 버튼 -->
-                  <a href="javascript:void(0)" @click="facebook()">
-                    <img src="@/assets/img/icon/face.png" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 32px;">
-                  </a>
-                  <!-- 트위터 공유 버튼 -->
-                  <a href="javascript:void(0)" @click="twitter()">
-                    <img src="@/assets/img/icon/twt.png" title="트위터로 공유하기" class="sharebtn_custom" style="width: 32px;">
-                  </a>
-                  <!-- 카카오 스토리 공유 버튼 -->
-                  <a href="javascript:void(0)" @click="kakaoStory()">
-                    <img src="@/assets/img/icon/kakao.png" title="카카오스토리로 공유하기" class="sharebtn_custom" style="width: 32px;">
-                  </a>
-                   <!-- 네이버 공유 버튼 --> 
-                  <a href="javascript:void(0)" @click="naver()">
-                    <img src="@/assets/img/icon/band.png" title="네이버로 공유하기" class="sharebtn_custom" style="width: 32px;">
-                  </a>
-                  <!-- 밴드 공유 버튼 --> 
-                  <a href="javascript:void(0)" @click="naverBand()">
-                    <img src="@/assets/img/icon/naver.png" title="밴드로 공유하기" class="sharebtn_custom" style="width: 32px;">
-                  </a>
-                </div>
+              <div class="sns-link-btn-warp">
+                <!-- 페이스북 공유 버튼 -->
+                <a href="javascript:void(0)" @click="facebook()">
+                  <img src="@/assets/img/icon/face.png" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                </a>
+                <!-- 트위터 공유 버튼 -->
+                <a href="javascript:void(0)" @click="twitter()">
+                  <img src="@/assets/img/icon/twt.png" title="트위터로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                </a>
+                <!-- 카카오 스토리 공유 버튼 -->
+                <a href="javascript:void(0)" @click="kakaoStory()">
+                  <img src="@/assets/img/icon/kakao.png" title="카카오스토리로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                </a>
+                  <!-- 네이버 공유 버튼 --> 
+                <a href="javascript:void(0)" @click="naver()">
+                  <img src="@/assets/img/icon/band.png" title="네이버로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                </a>
+                <!-- 밴드 공유 버튼 --> 
+                <a href="javascript:void(0)" @click="naverBand()">
+                  <img src="@/assets/img/icon/naver.png" title="밴드로 공유하기" class="sharebtn_custom" style="width: 32px;">
+                </a>
+              </div>
             </div>
 
             <div class="video-container">

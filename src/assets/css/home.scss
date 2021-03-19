@@ -45,23 +45,31 @@ main {
                 margin-top: 30px;
 
                 img {
-                    width: 210px;
+                    width: 180px;
                 }
                 
                 h2 {
-                    font-size: 36px;
+                    font-size: 26px;
                     font-weight: bold;
                     margin: 16px 0 20px;
+
+                    @media (min-width: 700px){
+                        font-size: 28px;
+                    }
                 }
                 
                 a {
                     display: inline-block;
                     color: #fff;
-                    font-size: 28px;
+                    font-size: 22px;
                     font-weight: bold;
                     padding: 15px 20px;
                     border-radius: 10px;
                     background: grey;
+
+                    @media (min-width: 700px){
+                        font-size: 26px;
+                    }
                 }
             }
         }
@@ -75,7 +83,12 @@ main {
             text-align: center;
 
             .introduction-inner {
-                font-size: 26px;
+                width: 433px;
+                margin: 0 auto;
+
+                @media (min-width: 700px){
+                    width: 500px;
+                }
 
                 .img-title-wrap {
 
@@ -86,19 +99,27 @@ main {
                     }
 
                     h2 {
-                        font-size: 28px;
+                        font-size: 26px;
                         font-weight: bold;
                         margin-top: 30px;
+
+                        @media (min-width: 700px){
+                            font-size: 28px;
+                        }
                     }
                 }
             }
 
             .text-wrap {
-                width: 1000px;
                 line-height: normal;
                 text-align: left;
                 letter-spacing: -1.5px;
                 margin: 0 auto;
+                font-size: 22px;
+
+                @media (min-width: 700px){
+                    font-size: 26px;
+                }
                 
                 div {
                     margin-bottom: 24px;
@@ -114,16 +135,24 @@ footer {
     background: #fcfcfc;
 
     .footer-inner {
-        width: 1000px;
+        width: fit-content;
         color: #666;
         font-size: 14px;
         line-height: normal;
         padding: 10px 0;
         margin: 0 auto;
-        border-top: 1px solid #999;
+
+        @media (min-width: 1025px){
+            width: 1000px;
+        }
 
         .ft-top-wrap {
-            display: flex;
+            display: block;
+            
+
+            @media (min-width: 1025px){
+                display: flex;    
+            }
 
             .ft-top-first {
                 display: flex;
@@ -137,6 +166,12 @@ footer {
             }
 
             .ft-top-second {
+                margin-top: 15px;
+
+                @media (min-width: 1025px){
+                    margin-top: 0;
+                }
+
                 ul {
                     display: flex;
 
@@ -158,7 +193,7 @@ footer {
 
                 p {
                     display: inline-block;
-                    margin-left: 10px;
+                    margin-right: 10px;
                 }
             }
         }
