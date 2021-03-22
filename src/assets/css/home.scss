@@ -139,6 +139,36 @@ main {
                 width: 500px;
             }
 
+            .title-wrap {
+                margin-bottom: 25px;
+
+                .youtube-link-btn {
+                    margin-bottom: 15px;
+
+                    button {
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: bold;
+                        padding: 20px 30px;
+                        border-radius: 13px;
+                        background: #aab500;
+                    }
+                }
+
+                .sns-link-btn-warp {
+
+                    a {
+                        display: inline-block;
+                        width: 38px;
+                        margin-right: 10px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
             .video-wrap {
                 width: 100%;
                 box-sizing: border-box;
