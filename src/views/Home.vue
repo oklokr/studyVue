@@ -54,10 +54,20 @@
           </div>
 
           <div class='youtube-content-wrap'>
-            <div class='title-wrap'>
-              <div class="youtube-link-btn">
-                <button>유튜브 채널 보러가기</button>
-              </div>
+          
+            <div class="youtube-link-btn">
+              <button>유튜브 채널 보러가기</button>
+            </div>
+
+            <div class="video-wrap">
+                <div class="video-container">
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eitDnP0_83k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="link-wrap">
+              <h2>페이지 공유하기</h2>
+
               <div class="sns-link-btn-warp">
                 <!-- 페이스북 공유 버튼 -->
                 <a href="javascript:void(0)" @click="facebook()">
@@ -80,12 +90,6 @@
                   <img src="@/assets/img/icon/naver.png" title="밴드로 공유하기" class="sharebtn_custom">
                 </a>
               </div>
-            </div>
-
-            <div class="video-wrap">
-                <div class="video-container">
-                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eitDnP0_83k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
             </div>
           </div>
         </div>
