@@ -77,6 +77,9 @@
                 <a href="javascript:void(0)" @click="twitter()">
                   <img src="@/assets/img/icon/twt.png" title="트위터로 공유하기" class="sharebtn_custom">
                 </a>
+                <a href="javascript:void(0)" @click="kakao()">
+                  <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+                </a>
                 <!-- 카카오 스토리 공유 버튼 -->
                 <a href="javascript:void(0)" @click="kakaoStory()">
                   <img src="@/assets/img/icon/kakao.png" title="카카오스토리로 공유하기" class="sharebtn_custom">
@@ -173,6 +176,42 @@ export default {
         const url_combine_band = this.url_default_band + encodeURI(url_this_page)+ '%0A' + encodeURI(title_this_page)+'%0A' + '&route=tistory.com';
         window.open(url_combine_band, '', 'scrollbars=no, width=584, height=635');
         return false;
+      },
+      kakao(){
+        window.Kakao.Link.sendDefault({
+          objectType: 'commerce',
+          content: {
+            title: '언제 어디든, 더 쉽고 편하게 당신의 일상을 더 즐겁게, 헤이 라이언의 이야기를 들려드릴게요.',
+            imageUrl:
+              'http://k.kakaocdn.net/dn/dScJiJ/btqB3cwK1Hi/pv5qHVwetz5RZfPZR3C5K1/kakaolink40_original.png',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
+            },
+          },
+          commerce: {
+            productName: '카카오미니',
+            regularPrice: 100000,
+            discountRate: 10,
+            discountPrice: 90000
+          },
+          buttons: [
+            {
+              title: '구매하기',
+              link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com',
+              },
+            },
+            {
+              title: '공유하기',
+              link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com',
+              },
+            },
+          ],
+        })
       }
     }
 }
