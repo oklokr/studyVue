@@ -69,11 +69,11 @@
           </a>
             <!-- 네이버 공유 버튼 --> 
           <a href="javascript:void(0)" @click="naver()">
-            <img src="@/assets/img/icon/band.png" title="네이버로 공유하기" class="sharebtn_custom">
+            <img src="@/assets/img/icon/naver.png" title="네이버로 공유하기" class="sharebtn_custom">
           </a>
           <!-- 밴드 공유 버튼 --> 
           <a href="javascript:void(0)" @click="naverBand()">
-            <img src="@/assets/img/icon/naver.png" title="밴드로 공유하기" class="sharebtn_custom">
+            <img src="@/assets/img/icon/band.png" title="밴드로 공유하기" class="sharebtn_custom">
           </a>
         </div>
       </div>
