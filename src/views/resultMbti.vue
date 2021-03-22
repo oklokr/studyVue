@@ -1,5 +1,11 @@
 <template>
   <div class="wrap">
+    <div class="dim">
+      <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-text">loading</div>
+      </div>
+    </div>
     <div class="logo">
       <router-link to="/"><img src="@/assets/img/text-logo.png" alt="텍스트 로고"></router-link>
     </div>
@@ -311,6 +317,10 @@ export default {
       break;
       default:break;
     }
+
+    setTimeout(() => {
+      document.querySelector('.dim').style.display = "none";
+    }, 2000);
   },
   methods: {
     facebook(){
