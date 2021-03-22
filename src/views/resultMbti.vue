@@ -12,6 +12,9 @@
         <img src="" alt="음식 이비지">
       </div>
       <div class="text-wrap">
+        <div class="result-mbti">
+          <p class="my-mbti">{{mbti}}</p>
+        </div>
         <div class="percent-text-wrap">
           <p>희귀성 : <span class="percent-text">{{resultPercent}}%</span></p>
         </div>
