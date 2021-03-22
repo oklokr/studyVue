@@ -249,8 +249,11 @@ export default {
             
             setTimeout(() => { 
                 document.querySelector('.page-gauge-bar-wrap').classList.add('active');
+
+                setTimeout(() => {
+                    document.querySelector('.main-page').remove()
+                }, 300);
             }, 300);
-            
         },
         nextEvent(){
             this.countNum++
@@ -258,7 +261,11 @@ export default {
             const nextCount = thisCount + 1;
             let gaugeVal = thisCount * 4.7526;
 
-            setTimeout(() => { document.querySelector(".gauge-number").innerHTML = nextCount; }, 300);
+            setTimeout(() => { 
+                document.querySelector(".gauge-number").innerHTML = nextCount;
+                
+                setTimeout(() => { document.querySelector(".question-box-"+thisCount+"").remove() }, 300);
+            }, 300);
             document.querySelector(".gauge-bar").style.left = gaugeVal + "%"
             document.querySelector(".question-box-"+thisCount+"").classList.add("active");
             document.querySelector(".question-box-"+nextCount+"").classList.add("open");
