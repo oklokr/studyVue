@@ -130,146 +130,148 @@
         }
     }
 
-    .logo {
-        text-align: center;
-        margin-bottom: 40px;
-        img {
-            width: 160px;
-        }
-    }
-
-    .result-mbti-content {
-        margin-bottom: 30px;
-
-        .title-wrap {
-            line-height: normal;
-            font-size: 20px;
-            font-weight: bold;
+    .content {
+        .logo {
             text-align: center;
-            margin-bottom: 15px;
-
-            .result-sub-title {
-                margin-bottom: 15px;
-            }
-
-            h2 {
-                font-size: 30px;
-            }
-        }
-
-        .img-wrap {
-            margin-bottom: 15px;
+            margin-bottom: 40px;
             img {
-                display: block;
-                height: 280px;
+                width: 160px;
             }
         }
 
-        .text-wrap {
-            text-align: center;
-            line-height: normal;
+        .result-mbti-content {
+            margin-bottom: 30px;
 
-            .result-mbti {
-                width: fit-content;
-                margin: 0 auto 15px;
-                background: #000;
-                padding: 5px 20px;
-                border-radius: 30px;
-
-                .my-mbti {
-                    font-size: 30px;
-                    font-weight: bold;
-                    color: #fff;
-                }
-            }
-
-            .percent-text-wrap {
+            .title-wrap {
+                line-height: normal;
                 font-size: 20px;
                 font-weight: bold;
+                text-align: center;
                 margin-bottom: 15px;
 
-                span {
+                .result-sub-title {
+                    margin-bottom: 15px;
+                }
+
+                h2 {
                     font-size: 30px;
                 }
             }
+
+            .img-wrap {
+                margin-bottom: 15px;
+                img {
+                    display: block;
+                    height: 280px;
+                }
+            }
+
+            .text-wrap {
+                text-align: center;
+                line-height: normal;
+
+                .result-mbti {
+                    width: fit-content;
+                    margin: 0 auto 15px;
+                    background: #000;
+                    padding: 5px 20px;
+                    border-radius: 30px;
+
+                    .my-mbti {
+                        font-size: 30px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+                }
+
+                .percent-text-wrap {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+
+                    span {
+                        font-size: 30px;
+                    }
+                }
+            }
         }
-    }
 
-    .result-good-bad-content {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-        div {
-            width: 49%;
-            font-size: 14px;
-            text-align: center;
-            padding: 20px 10px;
-            border: 1px solid #ccc;
-            border-radius: 15px;
+        .result-good-bad-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            div {
+                width: 49%;
+                font-size: 14px;
+                text-align: center;
+                padding: 20px 10px;
+                border: 1px solid #ccc;
+                border-radius: 15px;
 
-            .title-text {
-                color: #666;
+                .title-text {
+                    color: #666;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                }
+
+                img {
+                    display: block;
+                    height: 80px;
+                }
+
+                .result-good-mbti-text, .result-bad-mbti-text {
+                    display: inline-block;
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #fff;
+                    padding: 5px 12px;
+                    border-radius: 20px;
+                    background: #000;
+                    margin-bottom: 15px;
+                }
+
+                .result-good-text, .result-bad-text {
+                    letter-spacing: -1px;
+                }
+            }
+        }
+
+        .btn-wrap {
+            margin-bottom: 30px;
+
+            .re-test-btn {
+                display: block;
+                line-height: 48px;
                 text-align: center;
                 font-weight: bold;
-                margin-bottom: 15px;
+                font-size :14px;
+                border-radius: 10px;
+                background: #eeeeee;
             }
+        }
 
-            img {
-                display: block;
-                height: 80px;
-            }
-
-            .result-good-mbti-text, .result-bad-mbti-text {
+        .result-link-wrap {
+            h2 {
                 display: inline-block;
                 font-weight: bold;
                 font-size: 16px;
-                color: #fff;
-                padding: 5px 12px;
-                border-radius: 20px;
-                background: #000;
-                margin-bottom: 15px;
+                padding: 5px 0;
+                margin-bottom: 20px;
+                border-bottom: 1px solid #000;
             }
 
-            .result-good-text, .result-bad-text {
-                letter-spacing: -1px;
-            }
-        }
-    }
+            .sns-link-btn-warp {
+                display: flex;
 
-    .btn-wrap {
-        margin-bottom: 30px;
+                a {
+                    display: block;
+                    width: 38px;
+                    margin-right: 10px;
 
-        .re-test-btn {
-            display: block;
-            line-height: 48px;
-            text-align: center;
-            font-weight: bold;
-            font-size :14px;
-            border-radius: 10px;
-            background: #eeeeee;
-        }
-    }
-
-    .result-link-wrap {
-        h2 {
-            display: inline-block;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 5px 0;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #000;
-        }
-
-        .sns-link-btn-warp {
-            display: flex;
-
-            a {
-                display: block;
-                width: 38px;
-                margin-right: 10px;
-
-                img {
-                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }

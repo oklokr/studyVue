@@ -1,80 +1,81 @@
 <template>
   <div class="wrap">
-    <div class="dim">
+    <div class="dim" v-show="loding">
       <div class="loading-container">
         <div class="loading"></div>
         <div id="loading-text">loading</div>
       </div>
     </div>
-    <div class="logo">
-      <router-link to="/"><img src="@/assets/img/text-logo.png" alt="텍스트 로고"></router-link>
-    </div>
-    <div class="result-mbti-content">
-      <div class="title-wrap">
-        <p class="result-sub-title">{{resultSubTitle}}</p>
-        <h2 class="result-title">{{resultTitle}}</h2>
-      </div>
-      <div class="img-wrap">
-        <img src="" alt="음식 이비지">
-      </div>
-      <div class="text-wrap">
-        <div class="result-mbti">
-          <p class="my-mbti">{{mbti}}</p>
-        </div>
-        <div class="percent-text-wrap">
-          <p>희귀성 : <span class="percent-text">{{resultPercent}}%</span></p>
-        </div>
-        <div class="result-text-wrap">
-          <p class="result-text">{{resultText}}</p>
-        </div>
-      </div>
-    </div>
-    <div class="result-good-bad-content">
-      <div class="result-good-warp">
-        <p class="title-text">같이 먹으면 좋은사람.</p>
-        <img src="" alt="음식 사진">
-        <p class="result-good-mbti-text">{{resultGoodMbti}}</p>
-        <p class="result-good-text">{{resultGoodTitle}}</p>
-      </div>
-      <div class="result-bad-warp">
-        <p class="title-text">같이 먹으면 좋은사람.</p>
-        <img src="" alt="음식 사진">
-        <p class="result-bad-mbti-text">{{resultBadMbti}}</p>
-        <p class="result-bad-text">{{resultBadTitle}}</p>
-      </div>
-    </div>
-    
-    <div class="btn-wrap">
-      <router-link to="/MbtiTest" class="re-test-btn">테스트 다시하기</router-link>
-    </div>
 
-    <div class="result-link-wrap">
-      <h2>결과 공유하기</h2>
+    <div class="content" v-show="content">
+      <div class="logo">
+        <router-link to="/"><img src="@/assets/img/text-logo.png" alt="텍스트 로고"></router-link>
+      </div>
+      <div class="result-mbti-content">
+        <div class="title-wrap">
+          <p class="result-sub-title">{{resultSubTitle}}</p>
+          <h2 class="result-title">{{resultTitle}}</h2>
+        </div>
+        <div class="img-wrap">
+          <img src="" alt="음식 이비지">
+        </div>
+        <div class="text-wrap">
+          <div class="result-mbti">
+            <p class="my-mbti">{{mbti}}</p>
+          </div>
+          <div class="percent-text-wrap">
+            <p>희귀성 : <span class="percent-text">{{resultPercent}}%</span></p>
+          </div>
+          <div class="result-text-wrap">
+            <p class="result-text">{{resultText}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="result-good-bad-content">
+        <div class="result-good-warp">
+          <p class="title-text">같이 먹으면 좋은사람.</p>
+          <img src="" alt="음식 사진">
+          <p class="result-good-mbti-text">{{resultGoodMbti}}</p>
+          <p class="result-good-text">{{resultGoodTitle}}</p>
+        </div>
+        <div class="result-bad-warp">
+          <p class="title-text">같이 먹으면 좋은사람.</p>
+          <img src="" alt="음식 사진">
+          <p class="result-bad-mbti-text">{{resultBadMbti}}</p>
+          <p class="result-bad-text">{{resultBadTitle}}</p>
+        </div>
+      </div>
+      <div class="btn-wrap">
+        <router-link to="/MbtiTest" class="re-test-btn">테스트 다시하기</router-link>
+      </div>
+      <div class="result-link-wrap">
+        <h2>결과 공유하기</h2>
 
-      <div class="sns-link-btn-warp">
-        <!-- 페이스북 공유 버튼 -->
-        <a href="javascript:void(0)" @click="facebook()">
-          <img src="@/assets/img/icon/face.png" title="페이스북으로 공유하기" class="sharebtn_custom">
-        </a>
-        <!-- 트위터 공유 버튼 -->
-        <a href="javascript:void(0)" @click="twitter()">
-          <img src="@/assets/img/icon/twt.png" title="트위터로 공유하기" class="sharebtn_custom">
-        </a>
-        <a href="javascript:void(0)" @click="kakao()">
-          <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
-        </a>
-        <!-- 카카오 스토리 공유 버튼 -->
-        <a href="javascript:void(0)" @click="kakaoStory()">
-          <img src="@/assets/img/icon/kakao.png" title="카카오스토리로 공유하기" class="sharebtn_custom">
-        </a>
-          <!-- 네이버 공유 버튼 --> 
-        <a href="javascript:void(0)" @click="naver()">
-          <img src="@/assets/img/icon/band.png" title="네이버로 공유하기" class="sharebtn_custom">
-        </a>
-        <!-- 밴드 공유 버튼 --> 
-        <a href="javascript:void(0)" @click="naverBand()">
-          <img src="@/assets/img/icon/naver.png" title="밴드로 공유하기" class="sharebtn_custom">
-        </a>
+        <div class="sns-link-btn-warp">
+          <!-- 페이스북 공유 버튼 -->
+          <a href="javascript:void(0)" @click="facebook()">
+            <img src="@/assets/img/icon/face.png" title="페이스북으로 공유하기" class="sharebtn_custom">
+          </a>
+          <!-- 트위터 공유 버튼 -->
+          <a href="javascript:void(0)" @click="twitter()">
+            <img src="@/assets/img/icon/twt.png" title="트위터로 공유하기" class="sharebtn_custom">
+          </a>
+          <a href="javascript:void(0)" @click="kakao()">
+            <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+          </a>
+          <!-- 카카오 스토리 공유 버튼 -->
+          <a href="javascript:void(0)" @click="kakaoStory()">
+            <img src="@/assets/img/icon/kakao.png" title="카카오스토리로 공유하기" class="sharebtn_custom">
+          </a>
+            <!-- 네이버 공유 버튼 --> 
+          <a href="javascript:void(0)" @click="naver()">
+            <img src="@/assets/img/icon/band.png" title="네이버로 공유하기" class="sharebtn_custom">
+          </a>
+          <!-- 밴드 공유 버튼 --> 
+          <a href="javascript:void(0)" @click="naverBand()">
+            <img src="@/assets/img/icon/naver.png" title="밴드로 공유하기" class="sharebtn_custom">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -105,6 +106,8 @@ export default {
       url_route_band : "&route=",
       url_default_naver : "http://share.naver.com/web/shareView.nhn?url=",
       title_default_naver : "&title=",
+      loding : true,
+      content : false,
     }
   },
   mounted(){
@@ -320,10 +323,7 @@ export default {
       break;
       default:break;
     }
-
-    setTimeout(() => {
-      document.querySelector('.dim').style.display = "none";
-    }, 2000);
+    setTimeout(() => { this.loding = false; this.content = true }, 2000);
   },
   methods: {
     facebook(){
