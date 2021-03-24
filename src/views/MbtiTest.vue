@@ -6,7 +6,8 @@
                     <h2>음식 유형 테스트</h2>
                 </div>
                 <div class="main-page-content-wrap">
-                    <img src="@/assets/img/food-img.gif" alt="음식사진" class="food-img">
+                    <!-- @/assets/img/food-img.gif -->
+                    <img src="" alt="음식사진" class="food-img">
                     <button class="start-btn" @click.once="startClickEvnet">음식 유형 테스트 시작하기</button>
                     <img src="@/assets/img/text-logo.png" alt="텍스트 로고" class="text-logo">
                 </div>
@@ -263,7 +264,7 @@ export default {
 
             setTimeout(() => { 
                 document.querySelector(".gauge-number").innerHTML = nextCount;
-                
+
                 setTimeout(() => { document.querySelector(".question-box-"+thisCount+"").remove() }, 300);
             }, 300);
             document.querySelector(".gauge-bar").style.left = gaugeVal + "%"

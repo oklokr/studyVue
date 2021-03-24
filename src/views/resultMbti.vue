@@ -60,6 +60,7 @@
           <a href="javascript:void(0)" @click="twitter()">
             <img src="@/assets/img/icon/twt.png" title="트위터로 공유하기" class="sharebtn_custom">
           </a>
+          <!-- 카카오톡 공유 버튼 -->
           <a href="javascript:void(0)" @click="kakao()">
             <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
           </a>
