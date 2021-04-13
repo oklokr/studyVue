@@ -1,0 +1,48 @@
+header {
+    width: 100%;
+    background: #020d1c;
+
+    &.no-scroll {
+        position: absolute;
+    }
+
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        max-width: 750px;
+        height: 50px;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        .logo-wrap {
+            
+            img {
+                width: 30px;
+                height: 100%;
+            }
+        }
+
+        .nav {
+            overflow: hidden;
+            ul {
+                display: flex;
+
+                li {
+                    margin: 0 20px;
+
+                    a {
+                        font-size: 17px;
+                        color: #fff;
+                        transition: .2s;
+
+                        &:hover,
+                        &.active {
+                            color: #19cbf7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

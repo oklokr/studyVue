@@ -1,274 +1,75 @@
-header {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    
-    .header-inner {
-
-        h1 {
-
-            a {
-                display: block;
-
-                img {
-                    display: block;
-                    width: 64px;
-                }
-            }
-        }
-    }
-}
-
 main {
+    width: 100%;
 
-    .banner {
-        .main-banner-wrap {
+    .home-area {
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(-45deg, #1c3a64, #000);
+
+        .home-content-wrap {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
             flex-direction: column;
-            height: 100%;
-            padding: 30px 0;
-            background: #f5f6fa;
-
-            .img-wrapper {
-                text-align: center;
-
-                img {
-                    width: 325px;
-
-                    @media (min-width: 700px){
-                        width: 400px;
-                    }
-                }
-            }
-
-            .text-btn-wrap {
-                text-align: center;
-                margin-top: 30px;
-
-                img {
-                    width: 180px;
-                }
-                
-                h2 {
-                    font-size: 26px;
-                    font-weight: bold;
-                    margin: 16px 0 20px;
-
-                    @media (min-width: 700px){
-                        font-size: 28px;
-                    }
-                }
-                
-                a {
-                    display: inline-block;
-                    color: #fff;
-                    font-size: 22px;
-                    font-weight: bold;
-                    padding: 15px 20px;
-                    border-radius: 10px;
-                    background: grey;
-
-                    @media (min-width: 700px){
-                        font-size: 26px;
-                    }
-                }
-            }
-        }
-    }
-
-    .content {
-        
-        .content-inner {
-            width: 100%;
-            padding: 30px 20px;
-            text-align: center;
-
-            .introduction-inner {
-                width: 100%;
-                margin: 0 auto 50px;
-
-                @media (min-width: 700px){
-                    width: 500px;
-                }
-
-                .img-title-wrap {
-
-                    margin-bottom: 40px;
-
-                    img {
-                        width: 300px;
-                    }
-
-                    h2 {
-                        font-size: 26px;
-                        font-weight: bold;
-                        margin-top: 30px;
-
-                        @media (min-width: 700px){
-                            font-size: 28px;
-                        }
-                    }
-                }
-            }
-
-            .text-wrap {
-                line-height: normal;
-                text-align: left;
-                letter-spacing: -1.5px;
-                margin: 0 auto;
-                font-size: 22px;
-
-                @media (min-width: 700px){
-                    font-size: 26px;
-                }
-                
-                div {
-                    margin-bottom: 24px;
-                }
-            }
-        }
-
-        .youtube-content-wrap {
-            width: 100%;
+            justify-content: center;
             margin: 0 auto;
 
-            @media (min-width: 700px){
-                width: 500px;
+            > div {
+                text-align: center;
             }
 
-            .youtube-link-btn {
-                margin-bottom: 25px;
+            .home-img-wrap {
+                margin-bottom: 51px;
+
+                img {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+            .home-text-wrap {
+                color: #fff;
+                margin-bottom: 30px;
+
+                .home-text-title-wrap {
+                    font-size: 50px;
+                    margin-bottom: 18px;
+
+                    .first-text {
+                        font-weight: 500;
+                        color: #00cbf7;
+                    }
+
+                    .second-text {
+                        font-weight: 300;
+                    }
+
+                    .third-text {
+                        font-weight: 100;
+                    }
+                }
+                
+            }
+
+            .home-text {
+                line-height: 1.7;
+                
+                p {
+                    font-size: 17px;
+                }
+
+                span {
+                    font-size: 19px;
+                    font-weight: 400;
+                }
+            }
+
+            .home-btn-wrap {
 
                 button {
-                    width: 100%;
+                    padding: 16.5px 26.5px;
                     color: #fff;
-                    font-size: 20px;
-                    font-weight: bold;
-                    padding: 12px 0;
-                    border-radius: 13px;
-                    background: #aab500;
-                }
-            }
-
-            .video-wrap {
-                width: 100%;
-                box-sizing: border-box;
-
-                .video-container {
-                    position: relative;
-                    width: 100%;
-                    height: auto;
-                    padding-top: 60%;
-                    	
-                    iframe {
-                        z-index: 1;
-                        top: 0;
-                        left: 0;
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-
-            .link-wrap {
-                text-align: left;
-                margin-top: 30px;
-
-                h2 {
-                    display: inline-block;
-                    font-weight: bold;
-                    font-size: 16px;
-                    padding: 5px 0;
-                    margin-bottom: 20px;
-                    border-bottom: 1px solid #000;
-                }
-
-                .sns-link-btn-warp {
-                    display: flex;
-
-                    a {
-                        display: block;
-                        width: 38px;
-                        margin-right: 10px;
-
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-footer {
-    padding: 30px 25px;
-    border-top: 1px solid #eee;
-    background: #fcfcfc;
-
-    .footer-inner {
-        width: fit-content;
-        color: #666;
-        font-size: 14px;
-        line-height: normal;
-        padding: 10px 0;
-        margin: 0 auto;
-
-        @media (min-width: 1025px){
-            width: 1000px;
-        }
-
-        .ft-top-wrap {
-            display: block;
-            
-
-            @media (min-width: 1025px){
-                display: flex;    
-            }
-
-            .ft-top-first {
-                display: flex;
-                margin-right: 40px;
-
-                p {
-                    &:nth-child(2) {
-                        margin-left: 10px;
-                    }
-                }
-            }
-
-            .ft-top-second {
-                margin-top: 15px;
-
-                @media (min-width: 1025px){
-                    margin-top: 0;
-                }
-
-                ul {
-                    display: flex;
-
-                    a {
-                        display: block;
-                        color: #666;
-                        font-weight: bold;
-                        margin-right: 15px;
-                    }
-                }
-            }
-        }
-
-        .ft-bottom-wrap {
-            margin-top: 15px;
-            font-size: 12px;
-
-            div {
-
-                p {
-                    display: inline-block;
-                    margin-right: 10px;
+                    border: 1px solid #fff;
+                    font-size: 17px;
                 }
             }
         }
