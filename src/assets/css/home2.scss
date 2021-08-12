@@ -106,18 +106,6 @@ main {
                 left: 100px;
                 bottom: 70px;
                 z-index: 2;
-
-                animation: media-ani 2s 2s forwards normal;
-
-                    @keyframes media-ani {
-                        0% {
-                            opacity: 0;
-                        }
-
-                        100% {
-                            opacity: 1;
-                        }
-                    }
             }
 
             video {
@@ -139,19 +127,6 @@ main {
             .top-content {
                 width: fit-content;
                 margin-bottom: 20px;
-                position: relative;
-                animation: cu-text-ani 2s forwards normal;
-
-                @keyframes cu-text-ani {
-                    0% {
-                        left: 100%;
-                        opacity: 0;
-                    }
-                    100% {
-                        left: 0;
-                        opacity: 1;
-                    }
-                }
 
                 .icon-text-wrap {
                     display: flex;
@@ -231,19 +206,6 @@ main {
                 font-size: 18px;
                 line-height: 1.2;
                 margin-left: auto;
-                position: relative;
-                animation: area1-text-ani 2s forwards normal;
-
-                @keyframes area1-text-ani {
-                    0% {
-                        right: 100%;
-                        opacity: 0;
-                    }
-                    100% {
-                        right: 0;
-                        opacity: 1;
-                    }
-                }
             }
 
             .bottom-content {
@@ -251,24 +213,6 @@ main {
                 .btn-wrap {
                     text-align: center;
                     margin-top: 50px;
-                    position: relative;
-                    pointer-events: none;
-                    opacity: 0;
-                    animation: area1-btn-ani 2s 2s forwards normal;
-
-                    @keyframes area1-btn-ani {
-                        0% {
-                            pointer-events: none;
-                            top: 130px;
-                            opacity: 0;
-                        }
-
-                        100% {
-                            pointer-events: initial;
-                            top: 0;
-                            opacity: 1;
-                        }
-                    }
 
                     button {
                         width: 30px;
@@ -318,9 +262,11 @@ main {
 
     .example-content {
         display: flex;
+        justify-content: space-between;
+        flex-direction: row;
         width: 100%;
         max-width: 1700px;
-        padding: 150px  0;
+        padding: 60px;
         margin: 0 auto;
 
         position: relative;
@@ -395,185 +341,144 @@ main {
 
         .example-success-wrap {
             display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 600px;
 
             .img-wrap {
                 display: flex;
-                width: 100%;
                 height: 600px;
 
-                .album-wrap {
-                    width: 100%;
-                    height: 600px;
-                    position: relative;
+                .control-wrap {
+                    height: fit-content;
+                    margin: auto 50px auto 0;
+                    text-align: center;
 
-                    .slide-box {
-                        width: 100%;
-                        height: 600px;
-                        position: absolute;
+                    button {
+                        width: 0px;
+                        height: 0px;
+                        border-left: 15px solid white;
+                        border-right: 15px solid white;
 
-                        .slide-wrap {
-                            display: flex;
-                            align-items: center;
-                            height: 600px;
+                        &.prvs-btn { 
+                            border-bottom: 15px solid #000;
+                            margin-bottom: 5px;
+                        }
 
-                            .slide-item {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                width: 100%;
-                                position: absolute;
-                                transition: .4s;
-                                opacity: 0;
+                        &.next-btn { 
+                            border-top: 15px solid #000;
+                            margin-top: 5px;
+                        }
 
-                                &.active {
-                                    opacity: 1;
+                        &.none {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+                    }
 
-                                    .move-icon {
-                                        animation: move-icon 2.5s;
+                    .control-inner {
+                        width: 150px;
+                        height: 80px;
+                        overflow: hidden;
 
-                                        @keyframes move-icon {
-                                            0% { 
-                                                right: -15%;
-                                                transition: .4s;
-                                            }
+                        .control-box {
+                            transition: .4s cubic-bezier(0.5, 0, 0.5, 1);
 
-                                            30% {
-                                                right: 60%;
-                                                transition: .4s ease-in-out .3s;
-                                            }
-
-                                            80% { 
-                                                right: 60%;
-                                                transition: .4s ease-in-out .2s;
-                                            }
-
-                                            100% {
-                                                right: 100%;
-                                                transition: .4s;
-                                            }
-                                        }
-                                    }
+                            .control-item-wrap {
+                                width: 150px;
+                                height: 80px;
+    
+                                img {
+                                    display: block;
+                                    width: 90px;
+                                    height: 50px;
+                                    margin: 0 auto;
                                 }
-
-                                .move-text-wrap {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-around;
-                                    width: 100%;
-                                    height: 600px;
-                                    position: absolute;
-                                    font-size: 70px;
-                                    font-weight: bold;
-                                    color: #000;
-
-                                    .top-text-box {
-                                        ul {
-                                            animation: scroll-left-top 60s linear infinite;
-                                            li {
-                                                display: inline-block;
-                                                width: fit-content;
-                                                margin-right: 30px;
-                                            }
-                                        }
-                                    }
-
-                                    .bottom-text-box {
-                                        ul {
-                                            width: 2835px;
-                                            animation: scroll-left-bottom 60s linear infinite;
-                                            li {
-                                                display: inline-block;
-                                                width: fit-content;
-                                                margin-right: 30px;
-                                            }
-                                        }
-                                    }
-
-                                    @keyframes scroll-left-top {
-                                        0% { transform: translateX(0%); }
-                                        100% { transform: translateX(-41%); }
-                                    }
-
-                                    @keyframes scroll-left-bottom {
-                                        0% { transform: translateX(-44%); }
-                                        100% { transform: translateX(-2%); }
-                                    }
-                                }
-
-                                .album-img {
-                                    width: 730px;
-                                    height: 600px;
-                                    box-shadow: 0 2px 14px 3px #00000059;
-                                    z-index: 2;
-                                }
-
-                                .move-icon {
-                                    width: 200px;
-                                    height: 200px;
-                                    position: absolute;
-                                    top: 0;
-                                    right: -15%;
-                                    z-index: 2;
+        
+                                p {
+                                    font-size: 18px;
+                                    margin-top: 10px;
                                 }
                             }
                         }
+
+                        
                     }
+
+                    
                 }
-            }
 
-            .controller-wrap {
+                .album-wrap {
 
-                .controller-inner {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-top: 30px;
-                }
-                .gauge-bar {
-                    width: 100px;
-                    height: 2px;
-                    background: #767676;
-                    margin: 0 7px 0;
+                    .slide-box {
+                        width: 600px;
+                        margin: 100px 0;
+    
+                        .slide-wrap {
+                            height: 100%;
 
-                    .gauge {
-                        width: 0%;
-                        height: 100%;
-                        background: blue;
+                            .slide-item {
+                                display: inline-block;
+                                width: 600px;
+                                height: 330px;
+                                margin-bottom: 100px;
+                                position: relative;
+                                transform: scale(.9);
+                                transition: .4s;
+
+                                &.active {
+                                    transform: scale(1);
+                                    &::after {
+                                        background-color: #00000000;
+                                    }
+                                }
+
+                                &::after {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    background: #0000005e;
+                                    transition: .4s;
+                                }
+                            }
+    
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
                     }
                 }
             }
         }
         
         .right-menu-list-wrap {
-            width: 100%;
+            width: fit-content;
             font-weight: bold;
             transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
     
             ul {
-                display: flex;
-                justify-content: center;
                 position: relative;
                 z-index: 10;
 
                 li {
                     display: flex;
                     align-items: center;
-                    padding: 20px 0;
-                    margin: 0 30px;
+                    padding: 10px 0;
                     position: relative;
                     color: #989a9e;
     
                     &.active {
                         pointer-events: none;
                         .text-wrap button { color: #000; }
-                        .menu-icon { background: #434343; width: 100%; }
+                        .menu-icon { background: #434343; }
                     }
-
+    
                     .text-wrap {
                         width: 100%;
+                        text-align: right;
+                        padding: 0 20px 0 0;
 
                         button {
                             font-weight: bold;
@@ -583,52 +488,12 @@ main {
                     }
     
                     .menu-icon {
-                        width: 0;
-                        height: 3px;
+                        width: 14px;
+                        height: 24px;
                         border-radius: 7px;
                         background: #989a9e;
                         transition: .3s;
-                        position: absolute;
-                        bottom: 15px;
                     }
-                }
-            }
-        }
-    }
-}
-
-.page-nav-wrap {
-    position: fixed;
-    top: 50%;
-    right: 17px;
-
-    ul {
-        background: #fff;
-        width: 16px;
-        margin: 4px 0;
-        padding: 4px;
-
-        li {
-            display: block;
-            position: relative;
-            width: 8px;
-            height: 8px;
-
-            a {
-                display: block;
-                position: relative;
-                cursor: pointer;
-                text-decoration: none;
-
-                span {
-                    border-radius: 50%;
-                    position: absolute;
-                    width: 4px;
-                    height: 4px;
-                    border: 0;
-                    left: 50%;
-                    top: 50%;
-                    margin: -2px 0 0 -2px;
                 }
             }
         }

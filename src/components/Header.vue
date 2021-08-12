@@ -1,27 +1,21 @@
 <template>
-    <header id="header" class="header no-scroll">
-
-        <nav class="nav-bar">
-            <div class="logo-wrap">
+    <header id="header" class="header">
+        <div class="nav-wrap">
+            <div class="nav-bar">
                 <h1 class="logo">
                     <a href="/">
-                        <img src="http://aig741.cafe24.com//resource/img/logo/logo.png" alt="로고 이미지">
+                    <img src="http://cumediagroup.mycafe24.com/wp-content/uploads/2021/01/cuwhite.png" alt="로고" width="74px">
                     </a>
                 </h1>
+                <div class="gnb-wrap">
+                    <ul>
+                        <li v-for="item in navText" :key="item">
+                            <router-link to="/About">{{item}}</router-link>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="nav">
-                <ul>
-                   <li v-for="(value, index) in navText" :key="value+index">
-                        <a
-                            href="javascript:void(0)"
-                            v-bind:class="{active:activeIndex==index}"
-                            v-on:click="activeIndex=index"
-                        >{{value}}</a>
-                   </li>
-                </ul>
-            </div>
-        </nav>
+        </div>
     </header>
 </template>
 
@@ -29,22 +23,8 @@
 export default {
     data() {
         return {
-            navText : ["Home", "About", "Portfolio", "Contact us"],
-            activeIndex : 0,
+            navText: ["ABOUT", "BROADCAST", "SERVICE", "CONTACT"]
         }
-    },
-    methods: {
-    },
-    mounted: () => {
-
-        document.querySelector('#header').style.top = document.querySelector(".home-area").offsetHeight+'px';
-
-        function handleResize(){
-            let height = document.querySelector(".home-area").offsetHeight+'px';
-            document.querySelector('#header').style.top = height;
-        }
-
-        window.addEventListener('resize', handleResize);
     }
 }
 </script>

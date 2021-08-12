@@ -320,7 +320,7 @@ main {
         display: flex;
         width: 100%;
         max-width: 1700px;
-        padding: 150px  0;
+        padding: 150px 60px 0;
         margin: 0 auto;
 
         position: relative;
@@ -430,32 +430,6 @@ main {
 
                                 &.active {
                                     opacity: 1;
-
-                                    .move-icon {
-                                        animation: move-icon 2.5s;
-
-                                        @keyframes move-icon {
-                                            0% { 
-                                                right: -15%;
-                                                transition: .4s;
-                                            }
-
-                                            30% {
-                                                right: 60%;
-                                                transition: .4s ease-in-out .3s;
-                                            }
-
-                                            80% { 
-                                                right: 60%;
-                                                transition: .4s ease-in-out .2s;
-                                            }
-
-                                            100% {
-                                                right: 100%;
-                                                transition: .4s;
-                                            }
-                                        }
-                                    }
                                 }
 
                                 .move-text-wrap {
@@ -470,7 +444,10 @@ main {
                                     color: #000;
 
                                     .top-text-box {
+
                                         ul {
+                                            min-width: 100%;
+
                                             animation: scroll-left-top 60s linear infinite;
                                             li {
                                                 display: inline-block;
@@ -482,8 +459,9 @@ main {
 
                                     .bottom-text-box {
                                         ul {
-                                            width: 2835px;
                                             animation: scroll-left-bottom 60s linear infinite;
+                                            text-align: center;
+
                                             li {
                                                 display: inline-block;
                                                 width: fit-content;
@@ -503,19 +481,10 @@ main {
                                     }
                                 }
 
-                                .album-img {
+                                img {
                                     width: 730px;
                                     height: 600px;
                                     box-shadow: 0 2px 14px 3px #00000059;
-                                    z-index: 2;
-                                }
-
-                                .move-icon {
-                                    width: 200px;
-                                    height: 200px;
-                                    position: absolute;
-                                    top: 0;
-                                    right: -15%;
                                     z-index: 2;
                                 }
                             }
@@ -539,7 +508,7 @@ main {
                     margin: 0 7px 0;
 
                     .gauge {
-                        width: 0%;
+                        width: 100%;
                         height: 100%;
                         background: blue;
                     }
